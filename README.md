@@ -9,7 +9,7 @@ This is the implementation of a basic calculator app which runs in a browser dev
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://descholar-calculator-react.herokuapp.com/)
 
 
 ### Prerequisites
