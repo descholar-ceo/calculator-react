@@ -67,7 +67,7 @@ body {
   display: grid;
   place-items: center;
   background-color: #e0e0e0;
-  color: #000000;
+  color: #000;
   padding: 10px;
 }
 
@@ -77,5 +77,5 @@ body {
 .row-number-3 h1:last-child,
 .row-number-4 h1:last-child {
   background-color: #f5913e;
-  color: #000000;
+  color: #000;
 }
