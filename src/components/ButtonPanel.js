@@ -16,23 +16,23 @@ const ButtonPanel = () => {
 
   return (
     <div className="calc">
-      <div className="btn-show">
+      <div>
         {rowOne}
       </div>
 
-      <div className="btn-show">
+      <div>
         {rowTwo}
       </div>
 
-      <div className="btn-show">
+      <div>
         {rowThree}
       </div>
 
-      <div className="btn-show">
+      <div>
         {rowFour}
       </div>
 
-      <div className="btn-show">
+      <div>
         {rowFive}
       </div>
     </div>
