@@ -6,7 +6,7 @@ import {
   groupFive,
   mapMarksToPanel,
   btnPanel,
-} from '../helpers/mark-helpers';
+} from '../helpers/btnHelpers';
 
 const ButtonPanel = () => {
   const rowOne = mapMarksToPanel(groupOne());
