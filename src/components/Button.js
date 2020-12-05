@@ -1,14 +1,9 @@
 import PropTypes from 'prop-types';
 
-const Button = props => {
-  const { btnMark } = props;
-  return (
-    <h3>{ btnMark }</h3>
-  );
-};
+const Button = ({ btnName }) => (<h1>{ btnName }</h1>);
 
 Button.propTypes = {
-  btnMark: PropTypes.string.isRequired,
+  btnName: PropTypes.string.isRequired,
 };
 
 export default Button;
