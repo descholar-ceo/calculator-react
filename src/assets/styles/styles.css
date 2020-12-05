@@ -16,3 +16,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.root {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.result-display {
+  background-color: #858693;
+  color: #fff;
+  padding: 20px;
+  text-align: right;
+}
