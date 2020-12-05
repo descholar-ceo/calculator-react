@@ -1,8 +1,8 @@
 # Calculator
 ![](https://img.shields.io/badge/Microverse-blueviolet) ![Linters](https://github.com/descholar-ceo/calculator-react/workflows/Linters/badge.svg)
 
-This is the implementation of a basic calculator app which runs in a browser developed with react.js. I worked on it for the purpose of learning and master react.js using class based components.
-![screenshot](./public/calculator.png)
+This is the implementation of a basic calculator app which runs in a browser developed with react.js. I worked on it for the purpose of learning and master react.js using class-based components.
+![screenshot](./src/assets/images/calculator.png)
 
 ## Built With
 - [React.js](https://reactjs.org/)
