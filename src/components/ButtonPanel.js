@@ -5,6 +5,7 @@ import {
   groupFour,
   groupFive,
   mapMarksToPanel,
+  btnPanel,
 } from '../helpers/mark-helpers';
 
 const ButtonPanel = () => {
@@ -13,28 +14,11 @@ const ButtonPanel = () => {
   const rowThree = mapMarksToPanel(groupThree());
   const rowFour = mapMarksToPanel(groupFour());
   const rowFive = mapMarksToPanel(groupFive());
+  const rowsArr = [rowOne, rowTwo, rowThree, rowFour, rowFive];
 
   return (
-    <div className="calc">
-      <div>
-        {rowOne}
-      </div>
-
-      <div>
-        {rowTwo}
-      </div>
-
-      <div>
-        {rowThree}
-      </div>
-
-      <div>
-        {rowFour}
-      </div>
-
-      <div>
-        {rowFive}
-      </div>
+    <div className="button-panel-container">
+      {btnPanel(rowsArr)}
     </div>
   );
 };
