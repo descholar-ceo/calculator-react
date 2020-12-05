@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 
