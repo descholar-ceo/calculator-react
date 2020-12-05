@@ -1,14 +1,17 @@
 import '../App.css';
 import { Fragment } from 'react';
+import ButtonPanel from './ButtonPanel';
+import Display from './Display';
 
 const App = () => (
-  <Fragment className="App">
-    <header className="App-header">
-      <h1>
-        Welcome to calculator developed with react
-      </h1>
-    </header>
-  </Fragment>
+  <>
+    <div className="App">
+      <header className="App-header">
+        <Display result="0" />
+        <ButtonPanel />
+      </header>
+    </div>
+  </>
 );
 
 export default App;
