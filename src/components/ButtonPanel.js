@@ -4,22 +4,22 @@ import {
   groupThree,
   groupFour,
   groupFive,
-  mapMarksToPanel,
-  btnPanel,
+  mapBtnsToPanel,
+  displayAllBtns,
 } from '../helpers/btnHelpers';
 
 const ButtonPanel = () => {
   const rowsArr = [
-    mapMarksToPanel(groupOne()),
-    mapMarksToPanel(groupTwo()),
-    mapMarksToPanel(groupThree()),
-    mapMarksToPanel(groupFour()),
-    mapMarksToPanel(groupFive()),
+    mapBtnsToPanel(groupOne()),
+    mapBtnsToPanel(groupTwo()),
+    mapBtnsToPanel(groupThree()),
+    mapBtnsToPanel(groupFour()),
+    mapBtnsToPanel(groupFive()),
   ];
 
   return (
     <div className="button-panel-container">
-      {btnPanel(rowsArr)}
+      {displayAllBtns(rowsArr)}
     </div>
   );
 };
