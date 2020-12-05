@@ -9,12 +9,13 @@ import {
 } from '../helpers/btnHelpers';
 
 const ButtonPanel = () => {
-  const rowOne = mapMarksToPanel(groupOne());
-  const rowTwo = mapMarksToPanel(groupTwo());
-  const rowThree = mapMarksToPanel(groupThree());
-  const rowFour = mapMarksToPanel(groupFour());
-  const rowFive = mapMarksToPanel(groupFive());
-  const rowsArr = [rowOne, rowTwo, rowThree, rowFour, rowFive];
+  const rowsArr = [
+    mapMarksToPanel(groupOne()),
+    mapMarksToPanel(groupTwo()),
+    mapMarksToPanel(groupThree()),
+    mapMarksToPanel(groupFour()),
+    mapMarksToPanel(groupFive()),
+  ];
 
   return (
     <div className="button-panel-container">
