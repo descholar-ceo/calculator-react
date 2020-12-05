@@ -7,7 +7,7 @@ const App = () => (
   <>
     <div className="App">
       <header className="App-header">
-        <Display result="0" />
+        <Display />
         <ButtonPanel />
       </header>
     </div>
