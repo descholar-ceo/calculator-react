@@ -25,15 +25,12 @@ body {
   margin: 1rem auto;
 }
 
-.result-display > h1 {
-  margin: 0;
-}
-
 .result-display {
   background-color: #858693;
   color: #fff;
   padding: 20px;
   text-align: right;
+  margin: 0;
 }
 
 .button-panel-container {
