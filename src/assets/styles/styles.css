@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family:
@@ -18,7 +22,11 @@ body {
 
 .root {
   width: 80%;
-  margin: 0 auto;
+  margin: 1rem auto;
+}
+
+.result-display > h1 {
+  margin: 0;
 }
 
 .result-display {
@@ -46,4 +54,28 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   place-items: center;
+}
+
+.row-number-0 > h1,
+.row-number-1 > h1,
+.row-number-2 > h1,
+.row-number-3 > h1,
+.row-number-4 > h1 {
+  border: 2px solid #858693;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #e0e0e0;
+  color: #000000;
+  padding: 10px;
+}
+
+.row-number-0 h1:last-child,
+.row-number-1 h1:last-child,
+.row-number-2 h1:last-child,
+.row-number-3 h1:last-child,
+.row-number-4 h1:last-child {
+  background-color: #f5913e;
+  color: #000000;
 }
