@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Button = props => {
   const { btnMark } = props;
   return (
-    <h1>{ btnMark }</h1>
+    <h3>{ btnMark }</h3>
   );
 };
 
