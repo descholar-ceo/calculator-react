@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Display = ({ result }) => <h1>{ result }</h1>;
+const Display = ({ result }) => <h1 className="result-display">{ result }</h1>;
 
 Display.propTypes = {
   result: PropTypes.string,
