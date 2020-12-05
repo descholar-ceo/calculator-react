@@ -1,40 +1,41 @@
-import Button from './Button';
-
-const signCalc = sign => <Button btnMark={sign} />;
+import {
+  groupOne,
+  groupTwo,
+  groupThree,
+  groupFour,
+  groupFive,
+  mapMarksToPanel,
+} from '../helpers/mark-helpers';
 
 const ButtonPanel = () => {
-  const group1 = ['AC', '+/-', '%', '÷'];
-  const group2 = ['7', '8', '9', 'X'];
-  const group3 = ['4', '5', '6', '-'];
-  const group4 = ['1', '2', '3', '+'];
-  const group5 = ['0', '.', '='];
-  const sign1 = group1.map(signCalc);
-  const sign2 = group2.map(signCalc);
-  const sign3 = group3.map(signCalc);
-  const sign4 = group4.map(signCalc);
-  const sign5 = group5.map(signCalc);
+  const rowOne = mapMarksToPanel(groupOne);
+  const rowTwo = mapMarksToPanel(groupTwo);
+  const rowThree = mapMarksToPanel(groupThree);
+  const rowFour = mapMarksToPanel(groupFour);
+  const rowFive = mapMarksToPanel(groupFive);
+
   return (
-    <div className = "calc">
-       <div className = "btn-show">
-          {sign1}
-       </div>
-
-       <div className = "btn-show">
-          {sign2}
-       </div>
-
-       <div className = "btn-show">
-          {sign3}
-       </div>
-
-       <div className = "btn-show">
-          {sign4}
-       </div>
-
-       <div className = "btn-show">
-          {sign5}
-       </div>
+    <div className="calc">
+      <div className="btn-show">
+        {rowOne}
       </div>
+
+      <div className="btn-show">
+        {rowTwo}
+      </div>
+
+      <div className="btn-show">
+        {rowThree}
+      </div>
+
+      <div className="btn-show">
+        {rowFour}
+      </div>
+
+      <div className="btn-show">
+        {rowFive}
+      </div>
+    </div>
   );
 };
 export default ButtonPanel;
