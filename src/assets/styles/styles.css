@@ -27,3 +27,21 @@ body {
   padding: 20px;
   text-align: right;
 }
+
+.button-panel-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.row-number-0,
+.row-number-1,
+.row-number-2,
+.row-number-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.row-number-4 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
