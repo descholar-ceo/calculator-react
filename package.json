@@ -40,6 +40,8 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-plugin-react": "^7.21.5",
     "stylelint": "13.3.x",
     "stylelint-config-standard": "20.0.x",
     "stylelint-csstree-validator": "^1.9.0",
