@@ -1,10 +1,11 @@
+import { Component } from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
-// eslint-disable-next-line no-unused-vars
-import calculate from '../logic/calculate';
+// import calculate from '../logic/calculate';
 
-class App {
-  constructor() {
+class App extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
       total: null,
       next: null,
@@ -13,9 +14,13 @@ class App {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick = () => {};
+  handleClick = btnName => {
+
+  };
 
   render() {
+    const { total, next, operation } = this.state;
+    console.log(total, next, operation);
     return (
       <>
         <Display />
