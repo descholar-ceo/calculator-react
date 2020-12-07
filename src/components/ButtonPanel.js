@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   groupOne,
   groupTwo,
@@ -8,13 +9,13 @@ import {
   displayAllBtns,
 } from '../helpers/btnHelpers';
 
-const ButtonPanel = () => {
+const ButtonPanel = ({ clickHandler }) => {
   const rowsArr = [
-    mapBtnsToPanel(groupOne()),
-    mapBtnsToPanel(groupTwo()),
-    mapBtnsToPanel(groupThree()),
-    mapBtnsToPanel(groupFour()),
-    mapBtnsToPanel(groupFive()),
+    mapBtnsToPanel(groupOne(), clickHandler),
+    mapBtnsToPanel(groupTwo(), clickHandler),
+    mapBtnsToPanel(groupThree(), clickHandler),
+    mapBtnsToPanel(groupFour(), clickHandler),
+    mapBtnsToPanel(groupFive(), clickHandler),
   ];
 
   return (
@@ -22,6 +23,10 @@ const ButtonPanel = () => {
       {displayAllBtns(rowsArr)}
     </div>
   );
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
 };
 
 export default ButtonPanel;
