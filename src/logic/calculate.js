@@ -1,3 +1,5 @@
+import operate from './operate';
+
 const calculate = (calculatorData, btnName) => {
   let { total, next, operation } = calculatorData;
   const symbolsArr = ['+', '-', 'x', '÷', '%'];
@@ -20,7 +22,31 @@ const calculate = (calculatorData, btnName) => {
     }
   }
 
-  return { total, next, operation };
+  if (allNumbersArr.includes(btnName) && !operation) {
+    if (!total) {
+      total = btnName;
+    } else {
+      total += btnName;
+    }
+  } else if (allNumbersArr.includes(btnName) && operation) {
+    if (!next) {
+      next = btnName;
+    } else {
+      next += btnName;
+    }
+  } else if (symbolsArr.includes(btnName) && total) {
+    operation = btnName;
+  } else if (btnName === '=' && total && next) {
+    if (symbolsArr.includes(operation)) {
+      total = operate(total, next, operation);
+    }
+    operation = null;
+    next = null;
+  }
+
+  const result = { total, next, operation };
+
+  return result;
 };
 
 export default calculate;
