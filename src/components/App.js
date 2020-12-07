@@ -4,6 +4,17 @@ import Display from './Display';
 import calculate from '../logic/calculate';
 
 class App {
+  constructor() {
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick = () => {};
+
   render() {
     return (
       <>
