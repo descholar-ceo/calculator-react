@@ -26,7 +26,7 @@ const operate = (numberOne, numberTwo, operation) => {
       res = firstArg.div(100);
       break;
     default:
-      res = 0;
+      throw Error(`The operation ${operation} is not known!`);
   }
   const resultToReturn = res.toString();
 
