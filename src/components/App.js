@@ -16,15 +16,14 @@ class App extends Component {
 
   handleClick = btnName => {
     const { total, next, operation } = this.state;
-    const result = calculate({ total, next, operation }, btnName);
-    this.setState({ total: result.total, next: result.next, operation: result.operation });
+    this.setState(calculate({ total, next, operation }, btnName));
   };
 
   render() {
     const { total, next } = this.state;
     return (
       <>
-        <Display result={total} next={next} />
+        <Display result={total || next || '0'} />
         <ButtonPanel clickHandler={this.handleClick} />
       </>
     );
