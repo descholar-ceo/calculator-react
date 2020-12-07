@@ -2,48 +2,77 @@ import operate from './operate';
 
 const calculate = (calculatorData, btnName) => {
   let { total, next, operation } = calculatorData;
-  const symbolsArr = ['+', '-', 'x', '÷', '%'];
-  const allNumbersArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 
-  if (btnName === '%' && total) {
-    const res = total / 100;
-    total = res.toString();
-    operation = null;
-  } else if (btnName === 'AC') {
-    total = null;
-    next = null;
-    operation = null;
-  } else if (btnName === '+/-') {
-    const res = total * -1;
-    total = res.toString();
-    if (next) {
-      const res = next * -1;
-      next = res.toString();
-    }
+  switch (btnName) {
+    case '%':
+      if (total) {
+        total /= 100;
+        total.toString();
+      }
+      break;
+    case 'AC':
+      total = null;
+      next = null;
+      operation = null;
+      break;
+    case '+/-':
+      total *= -1;
+      total.toString();
+      if (next) {
+        const res = next * -1;
+        next = res.toString();
+      }
+      break;
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+      if (!operation) {
+        if (!total) {
+          total = btnName;
+        } else {
+          total += btnName;
+        }
+      } else if (operation) {
+        if (!next) {
+          next = btnName;
+        } else {
+          next += next;
+        }
+      }
+      break;
+    case '.':
+      if (next) {
+        if (!next.includes('.')) {
+          next += '.';
+        }
+      } else if (operation) {
+        next = '0.';
+      } else if (!total.includes('.')) {
+        total += '.';
+      }
+      break;
+    case '+':
+    case '-':
+    case 'x':
+    case '÷':
+      if (total) {
+        operation = btnName;
+      }
+      break;
+    default: // when the btnName is equal to '='
+      if (next && total) {
+        total = operate(total, next, operation);
+        operation = null;
+        next = null;
+      }
   }
-
-  if (allNumbersArr.includes(btnName) && !operation) {
-    if (!total) {
-      total = btnName;
-    } else {
-      total += btnName;
-    }
-  } else if (allNumbersArr.includes(btnName) && operation) {
-    if (!next) {
-      next = btnName;
-    } else {
-      next += btnName;
-    }
-  } else if (symbolsArr.includes(btnName) && total) {
-    operation = btnName;
-  } else if (btnName === '=' && total && next) {
-    if (symbolsArr.includes(operation)) {
-      total = operate(total, next, operation);
-    }
-    operation = null;
-    next = null;
-  }
-
   const result = { total, next, operation };
 
   return result;
