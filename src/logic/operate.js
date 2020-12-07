@@ -23,7 +23,7 @@ const operate = (numberOne, numberTwo, operation) => {
       res = firstArg.plus(secondArg);
       break;
     case '%':
-      res = firstArg.div(100);
+      res = firstArg.mod(secondArg);
       break;
     default:
       throw Error(`The operation ${operation} is not known!`);

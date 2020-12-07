@@ -5,7 +5,7 @@ const calculate = (calculatorData, btnName) => {
 
   switch (btnName) {
     case '%':
-      if (total) {
+      if (total && !next) {
         total /= 100;
         total.toString();
       }
