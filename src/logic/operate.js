@@ -17,7 +17,7 @@ const operate = (numberOne, numberTwo, operation) => {
       }
       break;
     case 'x':
-      res = firstArg.mul;
+      res = firstArg.times(secondArg);
       break;
     case '+':
       res = firstArg.plus(secondArg);
