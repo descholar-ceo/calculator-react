@@ -8,6 +8,8 @@ const calculate = (calculatorData, btnName) => {
       if (total && !next) {
         total /= 100;
         total.toString();
+      } else if (total && next) {
+        operation = btnName;
       }
       break;
     case 'AC':
