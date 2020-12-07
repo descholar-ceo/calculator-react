@@ -80,3 +80,11 @@ body {
   background-color: #f5913e;
   color: #000;
 }
+
+.row-number-0 > h1:hover,
+.row-number-1 > h1:hover,
+.row-number-2 > h1:hover,
+.row-number-3 > h1:hover,
+.row-number-4 > h1:hover {
+  background-color: #49494b94;
+}
