@@ -21,14 +21,16 @@ body {
 }
 
 .root {
-  width: 80%;
+  width: 700px;
   margin: 1rem auto;
 }
 
 .result-display {
   background-color: #858693;
   color: #fff;
+  font-weight: bold;
   padding: 20px;
+  height: 100px;
   text-align: right;
   margin: 0;
 }
@@ -45,12 +47,14 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   place-items: center;
+  height: 100px;
 }
 
 .row-number-4 {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   place-items: center;
+  height: 100px;
 }
 
 .row-number-0 > h1,
