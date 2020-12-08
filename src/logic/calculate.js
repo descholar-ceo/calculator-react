@@ -35,14 +35,14 @@ const calculate = (calculatorData, btnName) => {
     case 7:
     case 8:
     case 9:
-      if (!operation) {
-        if (!total) {
+      if (operation === null) {
+        if (total === null) {
           total = btnName;
         } else {
           total += btnName;
         }
-      } else if (operation) {
-        if (!next) {
+      } else if (operation !== null) {
+        if (next === null) {
           next = btnName;
         } else {
           next += next;
@@ -50,11 +50,11 @@ const calculate = (calculatorData, btnName) => {
       }
       break;
     case '.':
-      if (next) {
+      if (next !== null) {
         if (!next.includes('.')) {
           next += '.';
         }
-      } else if (operation) {
+      } else if (operation !== null) {
         next = '0.';
       } else if (!total.includes('.')) {
         total += '.';
@@ -64,16 +64,19 @@ const calculate = (calculatorData, btnName) => {
     case '-':
     case 'x':
     case '÷':
-      if (total) {
+      if (total !== null) {
         operation = btnName;
       }
       break;
-    default: // when the btnName is equal to '='
+    case '=':
       if (next && total) {
         total = operate(total, next, operation);
         operation = null;
         next = null;
       }
+      break;
+    default: // when the btnName is equal to '='
+      total = operate(total, next, operation);
   }
   const result = { total, next, operation };
 
