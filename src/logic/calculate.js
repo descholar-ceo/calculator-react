@@ -56,8 +56,10 @@ const calculate = (calculatorData, btnName) => {
         }
       } else if (operation !== null) {
         next = '0.';
-      } else if (!total.includes('.')) {
-        total += '.';
+      } else if (total !== null) {
+        if (!total.includes('.')) {
+          total += '.';
+        }
       }
       break;
     case '+':
