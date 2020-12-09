@@ -23,7 +23,7 @@ class App extends Component {
     const { total, next } = this.state;
     return (
       <>
-        <Display result={total || next || '0'} />
+        <Display result={next || total || '0'} />
         <ButtonPanel clickHandler={this.handleClick} />
       </>
     );
