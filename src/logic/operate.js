@@ -13,7 +13,7 @@ const operate = (numberOne, numberTwo, operation) => {
       if (numberTwo !== '0') {
         res = firstArg.div(secondArg);
       } else {
-        res = 'Error: You can\'t divide a number by zero';
+        res = 'Error: You can\'t divide a number with zero';
       }
       break;
     case 'x':
