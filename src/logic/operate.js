@@ -4,6 +4,7 @@ const operate = (numberOne, numberTwo, operation) => {
   let res;
   const firstArg = new Big(numberOne);
   const secondArg = new Big(numberTwo);
+  console.log(numberOne, numberTwo, operation);
 
   switch (operation) {
     case '-':
