@@ -2,7 +2,6 @@ import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
   let res;
-  console.log(numberTwo);
   const firstArg = new Big(numberOne);
   const secondArg = new Big(numberTwo);
 
