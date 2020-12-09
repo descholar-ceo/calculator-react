@@ -10,10 +10,10 @@ const operate = (numberOne, numberTwo, operation) => {
       res = firstArg.minus(secondArg);
       break;
     case '÷':
-      if (secondArg !== '0') {
+      if (numberTwo !== '0') {
         res = firstArg.div(secondArg);
       } else {
-        res = 'Math Error';
+        res = 'Error: You can\'t divide a number by zero';
       }
       break;
     case 'x':
