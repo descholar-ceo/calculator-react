@@ -25,50 +25,54 @@ const calculate = (calculatorData, btnName) => {
         next = res.toString();
       }
       break;
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-    case 9:
-      if (!operation) {
-        if (!total) {
+    case '0':
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+    case '7':
+    case '8':
+    case '9':
+      if (operation === null) {
+        if (total === null) {
           total = btnName;
         } else {
           total += btnName;
         }
-      } else if (operation) {
-        if (!next) {
+      } else if (operation !== null) {
+        if (next === null) {
           next = btnName;
         } else {
-          next += next;
+          next += btnName;
         }
       }
       break;
     case '.':
-      if (next) {
-        if (!next.includes('.')) {
-          next += '.';
+      if (operation === null) {
+        if (total === null) {
+          total = `0${btnName}`;
+        } else if (!total.includes(btnName)) {
+          total += btnName;
         }
-      } else if (operation) {
-        next = '0.';
-      } else if (!total.includes('.')) {
-        total += '.';
+      } else if (operation !== null) {
+        if (next === null) {
+          next = `0${btnName}`;
+        } else if (!next.includes(btnName)) {
+          next += btnName;
+        }
       }
       break;
     case '+':
     case '-':
     case 'x':
     case '÷':
-      if (total) {
+      if (total !== null) {
         operation = btnName;
       }
       break;
-    default: // when the btnName is equal to '='
+    default:
       if (next && total) {
         total = operate(total, next, operation);
         operation = null;

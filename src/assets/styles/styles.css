@@ -57,11 +57,11 @@ body {
   height: 100px;
 }
 
-.row-number-0 > h1,
-.row-number-1 > h1,
-.row-number-2 > h1,
-.row-number-3 > h1,
-.row-number-4 > h1 {
+.row-number-0 > button,
+.row-number-1 > button,
+.row-number-2 > button,
+.row-number-3 > button,
+.row-number-4 > button {
   border: 1px solid #858693;
   height: 100%;
   width: 100%;
@@ -72,19 +72,19 @@ body {
   padding: 10px;
 }
 
-.row-number-0 h1:last-child,
-.row-number-1 h1:last-child,
-.row-number-2 h1:last-child,
-.row-number-3 h1:last-child,
-.row-number-4 h1:last-child {
+.row-number-0 button:last-child,
+.row-number-1 button:last-child,
+.row-number-2 button:last-child,
+.row-number-3 button:last-child,
+.row-number-4 button:last-child {
   background-color: #f5913e;
   color: #000;
 }
 
-.row-number-0 > h1:hover,
-.row-number-1 > h1:hover,
-.row-number-2 > h1:hover,
-.row-number-3 > h1:hover,
-.row-number-4 > h1:hover {
+.row-number-0 > button:hover,
+.row-number-1 > button:hover,
+.row-number-2 > button:hover,
+.row-number-3 > button:hover,
+.row-number-4 > button:hover {
   background-color: #49494b94;
 }
