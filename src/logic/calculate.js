@@ -45,20 +45,22 @@ const calculate = (calculatorData, btnName) => {
         if (next === null) {
           next = btnName;
         } else {
-          next += next;
+          next += btnName;
         }
       }
       break;
     case '.':
-      if (next !== null) {
-        if (!next.includes('.')) {
-          next += '.';
+      if (operation === null) {
+        if (total === null) {
+          total = `0${btnName}`;
+        } else if (!total.includes(btnName)) {
+          total += btnName;
         }
       } else if (operation !== null) {
-        next = '0.';
-      } else if (total !== null) {
-        if (!total.includes('.')) {
-          total += '.';
+        if (next === null) {
+          next = `0${btnName}`;
+        } else if (!next.includes(btnName)) {
+          next += btnName;
         }
       }
       break;
