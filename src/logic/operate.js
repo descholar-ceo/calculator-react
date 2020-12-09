@@ -10,7 +10,7 @@ const operate = (numberOne, numberTwo, operation) => {
       res = firstArg.minus(secondArg);
       break;
     case '÷':
-      if (secondArg !== 0) {
+      if (secondArg !== '0') {
         res = firstArg.div(secondArg);
       } else {
         res = 'Math Error';
