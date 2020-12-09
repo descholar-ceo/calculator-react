@@ -70,15 +70,12 @@ const calculate = (calculatorData, btnName) => {
         operation = btnName;
       }
       break;
-    case '=':
+    default:
       if (next && total) {
         total = operate(total, next, operation);
         operation = null;
         next = null;
       }
-      break;
-    default: // when the btnName is equal to '='
-      // total = operate(total, next, operation);
   }
   const result = { total, next, operation };
 
