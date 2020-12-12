@@ -20,7 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.root {
+.width-700 {
   width: 700px;
   margin: 1rem auto;
 }
@@ -67,18 +67,8 @@ body {
   width: 100%;
   display: grid;
   place-items: center;
-  background-color: #e0e0e0;
   color: #000;
   padding: 10px;
-}
-
-.row-number-0 button:last-child,
-.row-number-1 button:last-child,
-.row-number-2 button:last-child,
-.row-number-3 button:last-child,
-.row-number-4 button:last-child {
-  background-color: #f5913e;
-  color: #000;
 }
 
 .row-number-0 > button:hover,
@@ -87,4 +77,25 @@ body {
 .row-number-3 > button:hover,
 .row-number-4 > button:hover {
   background-color: #49494b94;
+}
+
+.orange-bg {
+  background-color: #f5913e;
+}
+
+.grey-bg {
+  background-color: #e0e0e0;
+}
+
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+  width: 100%;
+}
+
+main {
+  width: 90%;
+  margin: 1rem auto;
 }

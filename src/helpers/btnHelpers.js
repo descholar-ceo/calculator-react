@@ -7,7 +7,16 @@ export const groupFour = () => (['1', '2', '3', '+']);
 export const groupFive = () => (['0', '.', '=']);
 export const mapBtnsToPanel = (arr, clickHandler) => {
   const res = arr.map(
-    curr => (<Button key={curr} btnName={curr} clickHandler={clickHandler} />),
+    curr => {
+      let color;
+      const signs = ['÷', 'x', '-', '=', '+'];
+      if (signs.includes(curr)) {
+        color = 'orange';
+      } else {
+        color = 'grey';
+      }
+      return (<Button color={color} key={curr} btnName={curr} clickHandler={clickHandler} />);
+    },
   );
   return res;
 };
