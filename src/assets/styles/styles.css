@@ -88,17 +88,14 @@ body {
 }
 
 nav {
-  height: 100px;
+  height: 50px;
   display: flex;
   justify-content: space-around;
   place-items: center;
   width: 100%;
 }
 
-.left-align {
-  margin-right: auto;
-}
-
-.right-align {
-  margin-left: auto;
+main {
+  width: 90%;
+  margin: 1rem auto;
 }
