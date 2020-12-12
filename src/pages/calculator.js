@@ -10,10 +10,10 @@ const Calculator = () => {
     setState(calculate({ total, next, operation }, btnName));
   };
   return (
-    <>
+    <div className="width-700">
       <Display result={next || total || '0'} />
       <ButtonPanel clickHandler={handleClick} />
-    </>
+    </div>
   );
 };
 

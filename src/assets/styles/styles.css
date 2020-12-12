@@ -20,7 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.root {
+.width-700 {
   width: 700px;
   margin: 1rem auto;
 }
@@ -85,4 +85,20 @@ body {
 
 .grey-bg {
   background-color: #e0e0e0;
+}
+
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+  width: 100%;
+}
+
+.left-align {
+  margin-right: auto;
+}
+
+.right-align {
+  margin-left: auto;
 }
