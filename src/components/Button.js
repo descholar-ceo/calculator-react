@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 
-const Button = ({ btnName, clickHandler }) => (<button type="button" onClick={() => clickHandler(btnName)}>{ btnName }</button>);
+const Button = ({ btnName, clickHandler }) => (
+  <button type="button" onClick={() => clickHandler(btnName)}>{ btnName }</button>
+);
 
 Button.propTypes = {
   btnName: PropTypes.string.isRequired,
