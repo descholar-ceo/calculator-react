@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import NavBar from '../../components/NavBar';
+import App from '../../components/App';
 
-describe('Test navbar with snapshot', () => {
-  it('Renders NavBar correctly', done => {
-    const navBarComponent = renderer.create(<NavBar />).toJSON();
+describe('Test App with snapshot', () => {
+  it('Renders App correctly', done => {
+    const appComponent = renderer.create(<App />).toJSON();
 
-    expect(navBarComponent).toMatchSnapshot();
+    expect(appComponent).toMatchSnapshot();
     done();
   });
 });
