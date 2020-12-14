@@ -67,4 +67,18 @@ describe('Calculate function tests', () => {
     expect(result.total).toEqual('12.');
     done();
   });
+
+  it('When a btn of . is clicked, and total is not null, operation is not null and next is null, it returns a next = "0."', done => {
+    const result = calculate({ total: '12', next: null, operation: '+' }, '.');
+    expect(result).toHaveProperty('next');
+    expect(result.next).toEqual('0.');
+    done();
+  });
+
+  it('When a btn of . is clicked, and total is not null (is 12), operation is null and next is not null is (20), it returns a total = "20."', done => {
+    const result = calculate({ total: '12', next: '20', operation: '+' }, '.');
+    expect(result).toHaveProperty('next');
+    expect(result.next).toEqual('20.');
+    done();
+  });
 });
