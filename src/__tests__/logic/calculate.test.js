@@ -1,4 +1,4 @@
-import calculate from '../logic/calculate';
+import calculate from '../../logic/calculate';
 
 describe('Calculate function tests', () => {
   it('When passed a %, it returns a percentaged number', done => {

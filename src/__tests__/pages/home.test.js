@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Home from '../pages/home';
+import Home from '../../pages/home';
 
 describe('Homepage test with snapshot', () => {
   it('Render homepage correctly', done => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Fourofourpage from '../pages/fourofourpage';
+import Fourofourpage from '../../pages/fourofourpage';
 
 describe('Test Fourofourpage with snapshot', () => {
   it('Renders fourofourpage correctly', done => {
