@@ -1,8 +1,11 @@
 import renderer from 'react-test-renderer';
 import Home from '../pages/home';
 
-it('Render homepage correctly', () => {
-  const homePage = renderer.create(<Home />).toJSON();
+describe('Homepage test with snapshot', () => {
+  it('Render homepage correctly', done => {
+    const homePage = renderer.create(<Home />).toJSON();
 
-  expect(homePage).toMatchSnapshot();
+    expect(homePage).toMatchSnapshot();
+    done();
+  });
 });

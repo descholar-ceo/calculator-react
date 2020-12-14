@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render homepage correctly 1`] = `
+exports[`Homepage test with snapshot Render homepage correctly 1`] = `
 <div>
   <h1>
     Welcome to our page!
