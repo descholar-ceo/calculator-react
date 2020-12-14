@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Fourofourpage with snapshot Renders fourofourpage correctly 1`] = `
+<div>
+  <p>
+    Ooops!!! The page you requested does not exist, sorry!
+  </p>
+</div>
+`;

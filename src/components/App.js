@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import NavBar from './navBar';
+import NavBar from './NavBar';
 import Routes from './Routes';
 
 const App = () => (

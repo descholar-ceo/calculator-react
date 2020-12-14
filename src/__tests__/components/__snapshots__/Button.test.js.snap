@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Button component with snapshot Renders button component correctly 1`] = `
+<button
+  className="orange-bg"
+  onClick={[Function]}
+  type="button"
+>
+  +
+</button>
+`;

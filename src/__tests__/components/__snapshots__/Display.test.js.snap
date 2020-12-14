@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Display component with snapshot Renders Display component correctly 1`] = `
+<h1
+  className="result-display"
+>
+  445
+</h1>
+`;

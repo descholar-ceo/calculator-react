@@ -22,7 +22,7 @@ This is the implementation of a basic calculator app which runs in a browser dev
 Run `yarn start` or `npm start` to start the server
 
 ### Run tests by running the following command
-No tests yet
+`yarn test` or `npm test`
 
 ### Deployment
 [See it on heroku](https://descholar-calculator-react.herokuapp.com/)
