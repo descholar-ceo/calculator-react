@@ -81,4 +81,11 @@ describe('Calculate function tests', () => {
     expect(result.next).toEqual('20.');
     done();
   });
+
+  it('When a btn of + is clicked, and total is not null, it returns an operation = "+"', done => {
+    const result = calculate({ total: '12', next: null, operation: null }, '+');
+    expect(result).toHaveProperty('operation');
+    expect(result.operation).toEqual('+');
+    done();
+  });
 });
